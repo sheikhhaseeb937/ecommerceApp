@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Table Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 py-10">
+    <div class="container mx-auto px-4">
+        <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-lg">
+            <thead >
+                <tr class="bg-gray-200 text-gray-600">
+                    <th class="py-3 px-6 text-left">ID</th>
+                    <th class="py-3 px-6 text-left">Price</th>
+                    <th class="py-3 px-6 text-left">Title</th>
+                    <th class="py-3 px-6 text-left">UserID</th>
+                    <th class="py-3 px-6 text-left">ProductID</th>
+
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr class="border-t border-gray-300">
+                    <td class="py-3 px-6 text-left">1</td>
+                    <td class="py-3 px-6 text-left text-red-700 font-bold"><span>$</span>1999</td>
+                    <td class="py-3 px-6 text-left">Title</td>
+                    <td class="py-3 px-6 text-left text-green-600">UserID</td>
+                    <td class="py-3 px-6 text-left">ProductID</td>
+
+                </tr> -->
+                
+             
+            </tbody>
+        </table>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="admin.js"></script>
+</html>

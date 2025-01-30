@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+ <div class="parsent border-2 border-black w-[50%] h-[600px] mx-auto mt-5">
+    <h1 class="font-bold text-[2.5rem] text-center">Vendor Hello</h1>
+<div class="inputs flex justify-center mt-[10px] flex-col ml-5">
+
+<h1 class="font-bold">Title</h1>
+    <input id="TitleInp" type="text" class="  w-[80%] border-2 border-black h-[50px] p-5 rounded-[20px]" placeholder="enter a title">
+
+    <h1 class="font-bold">Description</h1>
+    <textarea  id="Desc" name="" placeholder="enter a Description"  class="border-2 border-black w-[80%] h-[200px] p-4"></textarea>
+
+    <h1 class="font-bold">Price</h1>
+    <input  id="PriceInp" type="text" class="  w-[80%] border-2 border-black h-[50px] p-5 rounded-[20px]" placeholder="enter a Price">
+
+    <h1 class="font-bold">Images</h1>
+    <input  id="ImgFile" type="file">
+
+<div class="btn mt-4 flex justify-center">
+    <button onclick="AddProducts()"  id="AddBtn" class="w-[120px] h-[40px] bg-slate-500 text-white rounded-[20px]">Add Porduct</button>
+</div>
+
+</div>
+ </div>
+
+
+ <div id="cardP" class="cardParent row flex flex-wrap bg-slate-100 w-[100%] h-[100vh] mt-4">
+
+ <!-- <div class="cards  ml-9 mt-4 w-[240px] h-[350px] border-[1px] border-black">
+    <img src="images/category_bike.jpg" class="w-[100%] h-[50%]"  alt="">
+    <h1 class=" font-bold text-[1.2rem] ml-5">Motor Bike</h1>
+    <p class="text-[1rem] ml-5">Lorem ipsum dolor sit amet psum dolor sit ame</p>
+    <h1 class="font-bold text-[1.2rem] ml-5 text-red-600">$1800</h1>
+   <div class="btns flex justify-center gap-5 mt-4">
+    <button class="w-[100px] h-[40px] bg-red-400 rounded-[10px] text-white">Buy Now</button>
+    <button class="w-[100px] h-[40px] bg-orange-400 rounded-[10px] text-white">Add To Cart</button>
+
+   </div>
+
+
+
+</div>  -->
+
+ </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="vendor.js"></script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+<div class="buyCard">
+    <!-- Main Container -->
+    <div class="flex justify-center items-center min-h-screen bg-gray-50">
+        <div class="max-w-md w-full bg-white shadow-lg rounded-lg p-8">
+            <!-- Product Image -->
+            <div class="flex justify-center">
+                <img id="img" src="images/category_carbig.jpg" alt="Product" class="rounded-lg shadow-lg">
+            </div>
+
+            <!-- Product Details -->
+            <div class="mt-6">
+                <h2 id="title" class="text-3xl font-semibold text-gray-800">Product Name</h2>
+                <p id="desc" class="text-lg text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget libero felis.</p>
+
+                <!-- Product Price -->
+                <div class="flex items-center mt-4">
+                    <span id="price" class="text-2xl font-bold text-green-500">$49.99</span>
+                </div>
+                
+                <!-- Buy Now Button -->
+                <div class="mt-6">
+                    <button onclick="buynow()" class="w-full py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition duration-200">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="buyNow.js"></script>
+</html>
