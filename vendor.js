@@ -104,7 +104,7 @@ cardslist.innerHTML = `<div class="cards  ml-9 mt-4 w-[240px] h-[350px] border-[
     <p class="text-[1rem] ml-5">${data[i].desc}</p>
     <h1 class="font-bold text-[1.2rem] ml-5 text-red-600">${data[i].price}</h1>
    <div class="btns flex justify-center gap-5 mt-4">
-    <button class="w-[100px] h-[40px] bg-yellow-600 rounded-[10px] text-white">Edit Now</button>
+    <button onclick="editBtn(${data[i].id})"" class="w-[100px] h-[40px] bg-yellow-600 rounded-[10px] text-white">Edit Now</button>
     <button onclick="cardDelete(${data[i].id})"" class="w-[100px] h-[40px] bg-red-600 rounded-[10px] text-white">Delete</button>
 
    </div>`;
@@ -136,4 +136,42 @@ async function cardDelete(productid){
   if(!error){
     window.location.reload()
   }
+}
+
+async function editBtn(editID){
+  console.log("edit")
+  const { data, error } = await supabasePro
+  .from('product')
+  .select()
+  .eq("id",editID)
+  .single()
+
+console.log(data.title)
+TitleInp.value = data.title
+Desc.value = data.desc
+PriceInp.value = data.price
+
+AddBtn.innerHTML = "Update"
+AddBtn.removeAttribute("onclick")
+
+  AddBtn.addEventListener("click", async () => {
+    console.log("edit function");
+    const { error } = await supabasePro
+      .from("product")
+      .update({ 
+        title: TitleInp.value,
+        desc: Desc.value,
+        price: PriceInp.value
+      })
+      .eq("id", editID);
+
+      console.log(error)
+
+      if(!error){
+        alert('product update successfully')
+        window.location.reload()
+      }
+
+  });
+
 }
